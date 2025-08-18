@@ -6,10 +6,6 @@
 
 Un bot todo-en-uno para comunidades de Discord con sistema de economía, moderación, tickets y entretenimiento.  
 
-<p align="center">
-  <img src="https://i.imgur.com/J3Q6X1i.png" alt="Demo" width="500"/>
-</p>
-
 ## ✨ **Características**  
 
 | Módulo         | Funcionalidades                                                                 |
