@@ -29,16 +29,7 @@ cd DiscordBot
 pip install -r requirements.txt
 ```
 
-3. **Configura el bot:**  
-Edita `config.py` con tus IDs de Discord:  
-```python
-TOKEN = "tu_token_de_bot"
-WELCOME_CHANNEL_ID = 123456789
-TICKET_CATEGORY_ID = 987654321
-# ... (ver archivo completo)
-```
-
-4. **Inicia el bot:**  
+3. **Inicia el bot:**  
 ```bash
 python bot.py
 ```
