@@ -20,7 +20,7 @@ Un bot todo-en-uno para comunidades de Discord con sistema de economía, moderac
 
 1. **Clona el repositorio:**  
 ```bash
-git clone https://github.com/tu-usuario/DiscordBot.git
+git clone https://github.com/J-Uriol/DiscordBot.git
 cd DiscordBot
 ```
 
