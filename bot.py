@@ -19,6 +19,7 @@ USER_ID_NO_MENCIONAR = 454306880387547166
 ROL_GANADOR_ID = 1404422238312075286
 CANAL_ANUNCIOS_ID = 871470222886973543
 URL_ANUNCIO = "https:\\pruebaxd"
+NOMBRE_BOT = "PRUEBA"
 
 intents = discord.Intents.default()
 intents.message_content = True 
@@ -90,7 +91,7 @@ async def on_ready():
     bot.add_view(TicketView())  
     bot.add_view(CloseTicketView(None))  
     print(f'{bot.user.name} ha iniciado sesión.')
-    await bot.change_presence(activity=discord.Streaming(name="AkantorPlay13", url="https://www.twitch.tv/akantorplay13"))
+    await bot.change_presence(activity=discord.Streaming(name="prueba", url="prueba"))
     check_monthly_winner.start()
 
 @bot.event
@@ -265,7 +266,7 @@ async def redes(ctx):
     embed.add_field(name="Instagram", value="[@prueba](https://www.instagram.com/prueba/)", inline=False)
     embed.add_field(name="YouTube", value="[@prueba](https://www.youtube.com/channel/prueba)", inline=False)
     embed.add_field(name="X (antes Twitter)", value="[@prueba](https://x.com/prueba)", inline=False)
-    embed.add_field(name="Twitch", value="[@Akantorplay](https://www.twitch.tv/prueba)", inline=False)
+    embed.add_field(name="Twitch", value="[@Prueba](https://www.twitch.tv/prueba)", inline=False)
     embed.set_footer(text=f"¡Gracias por tu apoyo, {ctx.author.name}!")
     embed.set_thumbnail(url="")
     embed.set_image(url="")
@@ -300,18 +301,18 @@ async def pc(ctx):
 # Lista de comandos por categoría
 comandos = {
     "General": [
-        ("!redes", "Muestra las redes sociales oficiales de Akantor."),
+        ("!redes", "Muestra las redes sociales oficiales de $NOMBRE_BOT ."),
         ("!ping", "Muestra el ping con el servidor."),
         ("!info", "Muestra información del bot."),
         ("!sugerencia", "Añade una sugerencia en el canal de sugerencias."),
-        ("!pc", "Muestra las especificaciones del ordenador de Akantor"),
+        ("!pc", "Muestra las especificaciones del ordenador de $NOMBRE_BOT"),
         ("!stats", "Muestra las estadisticas del servidor"),
     ],
     "Diversión": [
         ("!moneda", "Tira una moneda (cara o cruz)."),
         ("!suerte", "Haz una pregunta y obtén una respuesta al estilo de la bola mágica."),
-        ("!memide", "Aka te dice cuánto te mide, aleatoriamente."),
-        ("!rps", "Juegas un piedra papel tijera contra Aka (piedra , papel , tijera)"),
+        ("!memide", "$NOMBRE_BOT te dice cuánto te mide, aleatoriamente."),
+        ("!rps", "Juegas un piedra papel tijera contra $NOMBRE_BOT (piedra , papel , tijera)"),
     ],
     "Administración": [
         ("!say", "El bot repite el mensaje (solo administradores pueden usarlo)."),
@@ -1045,17 +1046,17 @@ async def flip_coin(ctx):
 @bot.command(name="suerte")
 async def eight_ball(ctx):
     respuestas = [
-        "Aka dice que: Bien.", "Aka dice que: Mal.", "Aka dice que: Tal vez.",
-        "Aka dice que: Definitivamente sí.", "Aka dice que: No cuentes con ello.",
-        "Aka dice que: Claro que sí.", "Aka dice que: Parece que sí.",
-        "Aka dice que: Mejor no te digo nada.", "Aka dice que: No estoy seguro, vuelve a intentarlo.",
-        "Aka dice que: Es probable.", "Aka dice que: Lo dudo.", "Aka dice que: ¡Claro que no!",
-        "Aka dice que: La respuesta es incierta.", "Aka dice que: La suerte está de tu lado.",
-        "Aka dice que: La fortuna te sonríe.", "Aka dice que: Todo depende de ti.",
-        "Aka dice que: No es un buen momento para eso.", "Aka dice que: ¡Sí, sin duda!",
-        "Aka dice que: No te preocupes, todo saldrá bien.", "Aka dice que: ¡Lo conseguirás!",
-        "Aka dice que: Los astros están alineados a tu favor.", "Aka dice que: Mejor espera un poco.",
-        "Aka dice que: El futuro es incierto, pero tal vez.", "Aka dice que: Confía en tu instinto."
+        "$NOMBRE_BOT dice que: Bien.", "$NOMBRE_BOT dice que: Mal.", "$NOMBRE_BOT dice que: Tal vez.",
+        "$NOMBRE_BOT dice que: Definitivamente sí.", "$NOMBRE_BOT dice que: No cuentes con ello.",
+        "$NOMBRE_BOT dice que: Claro que sí.", "$NOMBRE_BOT dice que: Parece que sí.",
+        "$NOMBRE_BOT dice que: Mejor no te digo nada.", "$NOMBRE_BOT dice que: No estoy seguro, vuelve a intentarlo.",
+        "$NOMBRE_BOT dice que: Es probable.", "$NOMBRE_BOT dice que: Lo dudo.", "$NOMBRE_BOT dice que: ¡Claro que no!",
+        "$NOMBRE_BOT dice que: La respuesta es incierta.", "$NOMBRE_BOT dice que: La suerte está de tu lado.",
+        "$NOMBRE_BOT dice que: La fortuna te sonríe.", "$NOMBRE_BOT dice que: Todo depende de ti.",
+        "$NOMBRE_BOT dice que: No es un buen momento para eso.", "$NOMBRE_BOT dice que: ¡Sí, sin duda!",
+        "$NOMBRE_BOT dice que: No te preocupes, todo saldrá bien.", "$NOMBRE_BOT dice que: ¡Lo conseguirás!",
+        "$NOMBRE_BOT dice que: Los astros están alineados a tu favor.", "$NOMBRE_BOT dice que: Mejor espera un poco.",
+        "$NOMBRE_BOT dice que: El futuro es incierto, pero tal vez.", "$NOMBRE_BOT dice que: Confía en tu instinto."
     ]
     respuesta = random.choice(respuestas)
     await ctx.send(f"{ctx.author.mention} {respuesta}")
@@ -1064,7 +1065,7 @@ async def eight_ball(ctx):
 async def me_mide(ctx):
     tamaños = ["2 cm 😳", "5 cm 😢", "10 cm 🫠", "15 cm 😏", "20 cm 😎", "30 cm 🔥"]
     medida = random.choice(tamaños)
-    await ctx.send(f"{ctx.author.mention} Aka dice que te mide {medida} ")
+    await ctx.send(f"{ctx.author.mention} $NOMBRE_BOT dice que te mide {medida} ")
 
 @bot.command(name="rps")
 async def piedra_papel_tijeras(ctx, eleccion: str):
@@ -1154,7 +1155,7 @@ class TicketView(View):
                         "**🔸 Regla básica:** Sé claro con tu solicitud y respeta al staff.",
             color=discord.Color.orange()
         )
-        embed.set_thumbnail(url="https://i.ibb.co/rscspsR/Reportes-aka.png")
+        embed.set_thumbnail(url="https://i.ibb.co/rscspsR/Reportes-$NOMBRE_BOT.png")
         embed.set_footer(text="🛠️ Usa el botón de abajo para cerrar el ticket.")
 
         await ticket_channel.send(embed=embed, view=CloseTicketView(ticket_channel))
@@ -1300,7 +1301,7 @@ async def warn(ctx, member: discord.Member, *, reason: str):
             description=f"Motivo: {reason}\n\nSi crees que esto es un error, contacta con un moderador.",
             color=discord.Color.red()
         )
-        embed_dm.set_footer(text=f"Servidor: AKA Server")
+        embed_dm.set_footer(text=f"Servidor: $NOMBRE_BOT Server")
         embed_dm.set_thumbnail(url="https://i.ibb.co/PZStwmWm/Nuevo-logo-1-2.jpg")
 
         try:
@@ -1389,10 +1390,10 @@ async def on_message(message):
 
         embed_mencion = discord.Embed(
             title="⚠️ Mensaje Eliminado",
-            description="Motivo: \nNo puedes mencionar a Akantor. \nPor favor, no lo vuelvas a repetir.",
+            description="Motivo: \nNo puedes mencionar a $NOMBRE_BOTntor. \nPor favor, no lo vuelvas a repetir.",
             color=discord.Color.red()
         )
-        embed_mencion.set_footer(text="Servidor: AKA Server")
+        embed_mencion.set_footer(text="Servidor: $NOMBRE_BOT Server")
         embed_mencion.set_thumbnail(url="https://i.ibb.co/PZStwmWm/Nuevo-logo-1-2.jpg")
 
         try:
