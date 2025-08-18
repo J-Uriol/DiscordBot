@@ -34,27 +34,6 @@ pip install -r requirements.txt
 python bot.py
 ```
 
-## 📸 **Capturas**  
-
-| Bienvenida Automática | Sistema de Tickets |  
-|-----------------------|--------------------|  
-| ![Welcome](https://i.imgur.com/welcome.png) | ![Tickets](https://i.imgur.com/tickets.png) |  
-
-| Economía | Moderación |  
-|----------|------------|  
-| ![Economy](https://i.imgur.com/economy.png) | ![Mod](https://i.imgur.com/mod.png) |  
-
-## ⚙️ **Estructura del Proyecto**  
-
-```bash
-.
-├── bot.py                # Código principal del bot
-├── config.py             # Configuración (token, IDs)
-├── economy.db            # Base de datos SQLite (automática)
-├── README.md             # Este archivo
-└── requirements.txt      # Dependencias
-```
-
 ## 🌟 **Comandos Destacados**  
 
 ```bash
@@ -89,8 +68,6 @@ MIT © 2025 Javier Uriol (https://github.com/J-Uriol)
 
 ### 🔗 **Enlaces Útiles**  
 [📚 Documentación de discord.py](https://discordpy.readthedocs.io/) •  
-[🐛 Reportar Issues](https://github.com/tu-usuario/DiscordBot/issues)  
-
 ---
 
 ✨ **Hecho con Python y ❤️ para comunidades de Discord**
