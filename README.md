@@ -40,9 +40,9 @@ python bot.py
 !daily       # Reclama monedas diarias
 !work        # Gana dinero trabajando
 !shop        # Tienda de artículos
-!ticket      # Abre un ticket de soporte
 !warn @user  # Advertencia a usuarios
 !roulette    # Juega a la ruleta
+!ping        # Verifica la latencia con el bot
 ```
 
 ## 🤝 **Contribuir**  
