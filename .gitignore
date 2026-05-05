@@ -1,5 +1,25 @@
 
-# Development
+# Entorno virtual
 .venv
-token.json
+venv/
+env/
+
+# Variables de entorno (¡NUNCA subir al repositorio!)
+.env
+
+# Bases de datos locales
+*.db
+
+# Caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos del sistema
 .DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
